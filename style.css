@@ -1,0 +1,60 @@
+/* 收藏櫃 Keepshelf 支援站 — 方向 G「暗房聚光」:根目錄 DESIGN.md §1 黑 · 細框 · 內容色。
+   值對齊 DesignTokens.swift(§4 色 7 個 / §6 間距 4-32 / 圓角 0-4-8-pill / 線 1px);
+   §2 原則:純黑底、1px hairline 承重、系統字、選中=反白。禁漸層 / 陰影 / 材質 / chrome 彩色。 */
+:root {
+  --bg: #000000;        /* §4 bg：畫面底、卡面 */
+  --surface: #161616;   /* §4 surface：必須有面的東西（details、footer 磚） */
+  --hairline: #3A3A3A;  /* §4 hairline：所有 1px 邊 */
+  --ink: #F5F5F5;       /* §4 ink：主文、反白填底 */
+  --sub: #9A9A9A;       /* §4 sub：唯一一階次文灰 */
+  --on-fill: #000000;   /* §4 onFill：ink 填底上的字 */
+  --space1: 4px; --space2: 8px; --space3: 12px; --space4: 16px; --space5: 24px; --space6: 32px;
+  --radius-m: 4px; --radius-l: 8px;
+}
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  /* §5：系統 SF，繁中回退 PingFang 是正解不是代價。不捆綁字型、不用等寬 */
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, system-ui, "PingFang TC",
+        "Noto Sans TC", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: var(--space6) var(--space4) 64px;
+}
+/* §2 原則 3：框承重、面不承重 —— 卡面與底同色，存在感由 1px 線給 */
+.panel {
+  max-width: 720px; margin: 0 auto; background: var(--bg);
+  border: 1px solid var(--hairline); border-radius: 0; /* §6 radiusS 0：直角是 G 的簽名 */
+  padding: var(--space6) var(--space5);
+}
+.hero { border-bottom: 1px solid var(--hairline); padding-bottom: var(--space5); margin-bottom: var(--space2); }
+/* 字標＝App Icon 的語法：一根細框圍著一件孤品 */
+.mark {
+  width: 22px; height: 22px; background: var(--bg);
+  border: 1px solid var(--hairline); margin-bottom: var(--space4);
+}
+h1 { font-size: 28px; line-height: 1.25; font-weight: 600; margin: 0 0 var(--space2); }
+h1 .en { color: var(--sub); font-weight: 400; font-size: 19px; }
+.tagline { color: var(--sub); margin: 0; font-size: 15px; }
+h2 { font-size: 20px; font-weight: 600; margin: var(--space6) 0 var(--space3); }
+p { margin: var(--space2) 0; }
+ul { padding-left: 22px; margin: var(--space2) 0; }
+li { margin: var(--space1) 0; }
+strong { font-weight: 600; }
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--sub); }
+/* §2 原則 4：選中／作用中 = ink 反白，全站唯一的強調語法 */
+a:hover, a:focus-visible { background: var(--ink); color: var(--on-fill); border-bottom-color: var(--ink); }
+details {
+  background: var(--surface); border: 1px solid var(--hairline); border-radius: var(--radius-m);
+  margin: var(--space2) 0; padding: var(--space3) var(--space4);
+}
+summary { cursor: pointer; font-weight: 500; font-size: 15px; }
+details p { color: var(--sub); margin-bottom: 0; }
+.en-block { margin-top: var(--space6); padding-top: var(--space5); border-top: 1px solid var(--hairline); }
+footer { margin-top: var(--space6); padding-top: var(--space5); border-top: 1px solid var(--hairline); color: var(--sub); font-size: 13px; }
+footer .sub { color: var(--sub); }
+@media (max-width: 480px) {
+  body { padding: var(--space4) var(--space2) 48px; }
+  .panel { padding: var(--space5) var(--space4); }
+  h1 { font-size: 24px; }
+}

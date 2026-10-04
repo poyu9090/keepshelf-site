@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>收藏櫃 Keepshelf — 隱私權政策</title>
+<title>收藏櫃 Tanako — 隱私權政策</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,22 +11,37 @@
   <header class="hero">
     <div class="mark" aria-hidden="true"></div>
     <h1>隱私權政策 <span class="en">Privacy Policy</span></h1>
-    <p class="tagline">生效日／最後更新 2026-09-12 · 適用於 iOS App「收藏櫃 Keepshelf」</p>
+    <p class="tagline">最後更新 2026-10-04(前版 2026-09-12) · 適用於 iOS App「收藏櫃 Tanako」</p>
   </header>
 
   <section>
     <h2>一句話</h2>
-    <p><strong>我們不收集任何資料。</strong>收藏櫃沒有伺服器、沒有帳號、沒有分析工具、沒有廣告。你拍的照片與填的資料只存在你的手機裡。</p>
+    <p><strong>你的收藏只存在你的手機裡。</strong>收藏櫃沒有帳號、沒有廣告、不做追蹤。我們只收集三種東西：① 匿名的使用統計（哪些功能被用到，用來改進 App）；② 你主動使用「AI 記錄」時送出的那幾張截圖或那段文字，交給 AI 整理成清單，整理完伺服器不保留；③ 新增收藏品時，縮小後的去背照會送去讓 AI 建議分類與實物尺寸，伺服器同樣不保留。</p>
   </section>
 
   <section>
     <h2>App 會用到的權限</h2>
     <ul>
-      <li><strong>相機</strong>：只在你按下「拍照」時開啟，用來拍攝收藏品。照片直接存進 App 的私有儲存空間，不會上傳。</li>
-      <li><strong>照片圖庫</strong>：只在你選「從相簿選擇」時讀取你挑選的那幾張，App 不會掃描整個圖庫。</li>
+      <li><strong>相機</strong>：只在你按下「拍照」時開啟，用來拍攝收藏品。照片直接存進 App 的私有儲存空間；只有下面「AI 判斷分類與尺寸」說的那張縮小去背照會送出，原圖不會上傳。</li>
+      <li><strong>照片圖庫</strong>：只在你選「從相簿選擇」或「截圖記錄」時讀取你挑選的那幾張，App 不會掃描整個圖庫。</li>
+      <li><strong>加入照片</strong>：只在你在「分享櫃子」按「儲存圖片」時使用，把你做好的分享圖存進相簿；只能新增、不會讀取你的相簿。</li>
+      <li><strong>麥克風與語音辨識</strong>：只在「錄音記錄」按住說話時使用，把你說的話轉成文字。裝置支援時轉寫完全在手機上完成；不支援的機型由 Apple 的語音辨識服務處理（依 Apple 隱私政策）。<strong>錄音本身不會送到我們的伺服器</strong>，只有轉出來、你確認過的文字會在你按「解析」時送出。</li>
     </ul>
     <p>去背（主體分割）完全在裝置上運算，不經過任何網路服務。</p>
-    <p>除了相機與照片，App 不會要求任何其他權限：不使用定位、麥克風、聯絡人、行事曆或健康資料。</p>
+    <p>除了上面三項，App 不會要求任何其他權限：不使用定位、聯絡人、行事曆或健康資料。</p>
+  </section>
+
+  <section>
+    <h2>AI 記錄（預購與許願）</h2>
+    <p><strong>先問過你才會送出。</strong>第一次使用任何 AI 功能（AI 記錄、或新增收藏品時的 AI 判斷）之前，App 會先說明會送出什麼、送到哪裡，並請你同意；不同意就不會送出任何東西，App 其他功能照常使用。你可以隨時在「我的」頁面的設定裡開啟或關閉。</p>
+    <p>這是選用功能，只在你按下「解析」時才會連網：</p>
+    <ul>
+      <li><strong>送出什麼</strong>：你挑的對話截圖（縮小後的 JPEG），或錄音轉出的文字。</li>
+      <li><strong>送到哪裡</strong>：先到我們架在 Cloudflare 上的轉送伺服器，再交給 Anthropic 的 Claude AI 整理成清單。轉送伺服器<strong>不儲存、不記錄</strong>截圖與文字內容，只記錄次數，用來計算免費試用與防止濫用。</li>
+      <li><strong>Anthropic</strong>：依其商用 API 條款處理，不用於訓練模型，並在其規定的期限內刪除。</li>
+      <li><strong>留在手機上的</strong>：整理好的清單，以及你那次挑的截圖（讓你之後在詳情頁對照）。刪除那一筆或刪除 App 即一併刪除。</li>
+      <li><strong>試用次數</strong>：用 Apple 的 DeviceCheck 記錄這台裝置用過幾次，DeviceCheck 不會讓我們知道你是誰。</li>
+    </ul>
   </section>
 
   <section>
@@ -41,14 +56,26 @@
   </section>
 
   <section>
-    <h2>第三方</h2>
-    <p>本 App 不整合任何第三方 SDK（無分析、無廣告、無崩潰回報）。「支援」與「使用條款」連結會開啟外部網頁，其隱私政策由各自網站負責。</p>
+    <h2>AI 判斷分類與尺寸（收藏品）</h2>
+    <p>新增收藏品、或在「堆疊」模式補上舊收藏的資料時，App 會在背景請 AI 建議這件東西屬於哪個分類、是什麼商品類型（公仔、海報、立牌…）、實際有多高：</p>
+    <ul>
+      <li><strong>送出什麼</strong>：去背後的收藏品照片，縮小到長邊 512 像素、轉成 JPEG；新增時另附這座櫃的分類名稱（讓 AI 從裡面挑一個）。不送原圖、名稱、價格、備註或任何其他資料。</li>
+      <li><strong>送到哪裡</strong>：同「AI 記錄」，經我們架在 Cloudflare 上的轉送伺服器交給 Anthropic 的 Claude AI。轉送伺服器<strong>不儲存、不記錄</strong>照片內容，只記錄次數，用來防止濫用；Anthropic 依其商用 API 條款處理，不用於訓練模型，並在其規定的期限內刪除。</li>
+      <li><strong>留在手機上的</strong>：AI 建議的分類、商品類型與高度，你可以隨時修改；改過的值 AI 不會再覆蓋。</li>
+      <li>這項判斷不扣 AI 記錄的免費次數。沒有網路時就不送，欄位留空，App 照常使用。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>使用統計與第三方</h2>
+    <p>App 使用 <strong>TelemetryDeck</strong> 收集匿名的使用統計（例如開了哪一頁、新增了幾件、去背有沒有成功），用來決定接下來改哪裡。統計不含照片、名稱、價格或任何你填的內容，使用的是無法還原的匿名識別碼，不會與你的身分連結。</p>
+    <p>除了 TelemetryDeck 與上面「AI 記錄」提到的 Cloudflare、Anthropic，App 不整合其他第三方服務（無廣告、無崩潰回報）。「支援」與「使用條款」連結會開啟外部網頁，其隱私政策由各自網站負責。</p>
     <p><strong>我們不做任何追蹤。</strong>App 不使用廣告識別碼（IDFA），不會把你的資料與其他公司的 App 或網站串接，也不會為了廣告或成效評估分享給任何第三方；因此 App 不會出現要求「允許追蹤」的系統彈窗。</p>
   </section>
 
   <section>
     <h2>兒童</h2>
-    <p>本 App 不收集任何資料，因此也不會收集 13 歲以下兒童的資料。</p>
+    <p>本 App 不要求帳號、不收集可識別個人的資料，也不會刻意收集 13 歲以下兒童的資料。</p>
   </section>
 
   <section>
@@ -63,12 +90,12 @@
 
   <section class="en-block" lang="en">
     <h2>English summary</h2>
-    <p><strong>We collect nothing.</strong> Keepshelf has no server, no account, no analytics and no ads. Photos you take or import, and any details you enter, stay on your device inside the app's private storage. Background removal runs entirely on-device. Camera and Photos access are used only when you tap to take or pick a photo; the app requests no other permissions. Deleting the app deletes all data. <strong>We do not track you:</strong> no IDFA, no advertising identifiers, no data shared with or linked to other companies' apps or websites, and no App Tracking Transparency prompt. VIP (monthly, yearly and the one-time lifetime unlock) is handled by Apple's in-app purchase; we never see your payment details. Effective / last updated 2026-09-12. Contact: poyu909090@gmail.com</p>
+    <p><strong>Your collection stays on your device.</strong> Tanako has no account, no ads and no tracking. We collect only (1) anonymous usage statistics via TelemetryDeck (which features are used; no photos, names, prices or anything you type, not linked to you), and (2) the screenshots or text you choose to send when you use the optional <strong>AI Record</strong> feature: they pass through our Cloudflare relay (which does not store content, only counts requests for the free trial and abuse limits) to Anthropic's Claude API, which processes them under its commercial terms, does not use them for training and deletes them within its retention period. The resulting list and the screenshots you picked stay on your device. When you add a collectible (or when the Pile view fills in details for older items), a downscaled copy of the background-removed photo (512 px, JPEG) — plus, when adding, your cabinet's category names — is sent the same way to suggest a category, product type and real-world height; nothing else is sent, the relay does not store it, and you can change the suggestion at any time. Voice notes are transcribed on-device where supported (otherwise by Apple's speech service); the audio itself is never sent to our server. Free-trial usage is counted with Apple DeviceCheck, which does not identify you. Background removal runs entirely on-device. <strong>Nothing is sent to AI until you agree:</strong> before you first use any AI feature, the app explains what is sent and where, and asks for your permission; if you decline, nothing is sent and the rest of the app works as usual. You can change this anytime in the Me tab settings. The “Add to Photos” permission is used only when you tap Save Images in Share Cabinet, and it can only add images, never read your library. Camera, Photos, Microphone and Speech Recognition are used only when you start the related action. Deleting the app deletes all data. <strong>We do not track you:</strong> no IDFA, no advertising identifiers, no data shared with or linked to other companies' apps or websites, and no App Tracking Transparency prompt. VIP (monthly, yearly and the one-time lifetime unlock) is handled by Apple's in-app purchase; we never see your payment details. Last updated 2026-10-04. Contact: poyu909090@gmail.com</p>
   </section>
 
   <footer>
     <p><a href="index.html">← 回支援頁</a></p>
-    <p class="sub">© 2026 收藏櫃 Keepshelf</p>
+    <p class="sub">© 2026 收藏櫃 Tanako</p>
   </footer>
 </main>
 </body>
